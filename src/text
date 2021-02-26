@@ -1,0 +1,52 @@
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  const nayoks =['Anwar','Janowar']
+  var design = {
+    backgroundColor:"yellow"
+  }
+ var person = {
+   name:'Turab',
+   sex : "Male"
+ }
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p style={design}>
+          Edit Done <code>src/App.js</code> and save to reload.
+        </p>
+        <h4>Person : {person.name} and Sex: {person.sex}</h4>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+        <p style={{color:"cyan"}}>My First {2+3} </p>
+        <Person name={nayoks[1]} ></Person>
+        <Person name="Kubel" ></Person>
+
+      </header>
+      
+    </div>
+  );
+}
+
+function Person(props){
+// const personStyle = {
+//   color:"yellow"
+// }
+console.log(props);
+
+  return ( <div style={{border:"2px solid red" ,margin:'10px',padding:'10px 30px'}}>
+  <h1>Name : {props.name}</h1>
+  <h2>Hero of the Year</h2>
+  </div>
+  )
+}
+
+export default App;
